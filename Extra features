@@ -1,0 +1,15 @@
+Level 1 difficulty (*):
+    - Implemented scanners and user input into the program
+    - You are able to choose the name, age, type, etc. of certain monsters
+    - Local variables using "this.example = example"
+    - Able to choose how much the spa day costs and how many years the monster is time warped by
+
+Level 2 difficulty (**):
+    - Implemented try and catch statements
+    - Implemented if statements and comparison operators
+
+Level 3 difficulty (***):
+    - Implemented a feature where if the new age set from the spa day function is less than 0, the new age set will become 0
+    - Implemented a feature where if the gpa set from the time warp function is over 4.0, the new gpa set will become 4.0
+
+

@@ -14,7 +14,7 @@ public class Monster {
     // private String typeMonsterTest;
     // private int ageMonsterTest;
     // private boolean bbMonsterTest;
-
+    // blah
     /*
     public Monster(String typeTest, String nameTest, int ageTest, boolean badBreathTest, double gpaTest) {
         // System.out.println("What is the type of your new monster?: ");

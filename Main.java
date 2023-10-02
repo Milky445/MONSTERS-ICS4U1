@@ -47,7 +47,7 @@ public class Main extends Monster {
         System.out.println("gpa: " + monster2.gpaMonster);
 
          */
-
+        // blah
         System.out.println("How much will your spa day cost?: ");
         double priceSpaDay = input.nextDouble();
         input.nextLine();
