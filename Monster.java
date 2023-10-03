@@ -1,220 +1,179 @@
+
+/*
+* Import basic libraries for further use
+ */
 import java.util.Scanner;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Arrays;
+
 public class Monster {
+
+    /*
+    * Initialize all variables that are used in the Monster class
+     */
     private String typeMonster;
     Scanner input = new Scanner(System.in);
     private String nameMonster;
     private int ageMonster;
     private boolean badBreathMonster;
     private double gpaMonster;
-    // private double gpaMonsterTest;
-    // private String nameMonsterTest;
-    // private String typeMonsterTest;
-    // private int ageMonsterTest;
-    // private boolean bbMonsterTest;
-    // blah
+
     /*
-    public Monster(String typeTest, String nameTest, int ageTest, boolean badBreathTest, double gpaTest) {
-        // System.out.println("What is the type of your new monster?: ");
-        // String type = input.nextLine();
-        // type = typeMonster;
-        this.typeMonsterTest = typeTest;
-        // System.out.println("What is the name of your new monster?: ");
-        // String name = input.nextLine();
-        // name = nameMonster;
-        this.nameMonsterTest = nameTest;
-        // System.out.println("What is the age of your new monster?: ");
-        // int age = input.nextInt();
-        // age = ageMonster;
-        this.ageMonsterTest = ageTest;
-        // System.out.println("Does your monster have bad breath? (True/False): ");
-        // boolean badBreath = input.nextBoolean();
-        // badBreath = badBreathMonster;
-        this.bbMonsterTest = badBreathTest;
-        // System.out.println("What is the gross point average of your new monster?: ");
-        // double gpa = input.nextDouble();
-        // gpa = gpaMonster;
-        this.gpaMonsterTest = gpaTest;
-        /*
-        System.out.println();
-        System.out.println("MONSTER 2");
-        System.out.println("---------------");
-        System.out.println("type: " + typeMonster);
-        System.out.println("name: " + nameMonster);
-        System.out.println("age: " + ageMonster);
-        System.out.println("bad breath: " + badBreathMonster);
-        System.out.println("gpa: " + gpaMonster);
-        System.out.println("---------------");
-        System.out.println();
-
-         */
-    // }
-
+    * SETTER METHODS
+    * Changes all information about the set monster
+    *
+    * @param newType The new type of the monster
+    * @param newName The new name of the monster
+    * @param newAge The new age of the monster
+    * @param newBadBreath The new state of bad breath of the monster
+    * @param newGPA The new gpa set for the monster
+     */
     public String changeType(String newType) {
         typeMonster = newType;
-        // System.out.println("New type: " + typeMonster);
+
         return typeMonster;
     }
 
     public String changeName(String newName) {
         nameMonster = newName;
-        // System.out.println("New name: " + nameMonster);
+
         return nameMonster;
     }
 
     public int changeAge(int newAge) {
         ageMonster = newAge;
-        // System.out.println("New age: " + ageMonster);
+
         return ageMonster;
     }
 
     public boolean changeBadBreath(boolean newBadBreath) {
         badBreathMonster = newBadBreath;
-        // System.out.println("New bad breath: " + badBreathMonster);
+
         return badBreathMonster;
     }
 
     public double changeGPA(double newGPA) {
         gpaMonster = newGPA;
-        // System.out.println("New GPA: " + gpaMonster);
+
         return gpaMonster;
     }
 
-    public Monster(String type, String name, int age, boolean badBreath, double gpa) {
-        // System.out.println("What is the type of your new monster?: ");
-        // String type = input.nextLine();
-        // type = typeMonster;
-        typeMonster = type;
-        // System.out.println("What is the name of your new monster?: ");
-        // String name = input.nextLine();
-        // name = nameMonster;
-        nameMonster = name;
-        // System.out.println("What is the age of your new monster?: ");
-        // int age = input.nextInt();
-        // age = ageMonster;
-        ageMonster = age;
-        // System.out.println("Does your monster have bad breath? (True/False): ");
-        // boolean badBreath = input.nextBoolean();
-        // badBreath = badBreathMonster;
-        badBreathMonster = badBreath;
-        // System.out.println("What is the gross point average of your new monster?: ");
-        // double gpa = input.nextDouble();
-        // gpa = gpaMonster;
-        gpaMonster = gpa;
-        /*
-        System.out.println();
-        System.out.println("MONSTER 2");
-        System.out.println("---------------");
-        System.out.println("type: " + typeMonster);
-        System.out.println("name: " + nameMonster);
-        System.out.println("age: " + ageMonster);
-        System.out.println("bad breath: " + badBreathMonster);
-        System.out.println("gpa: " + gpaMonster);
-        System.out.println("---------------");
-        System.out.println();
+    /*
+    * GETTER METHODS
+    *
+    * Return the age and rounded gpa of the monster, used for spa day and time warp
+    * @return The age of the monster
+    * @return The rounded gpa of the monster, set to 1 decimal place and round up at .5
+     */
+    public double getAgeMonster() {
+        return ageMonster;
+    }
 
-         */
+    public BigDecimal getGpaMonster() {
+        return new BigDecimal(this.gpaMonster).setScale(1, RoundingMode.HALF_UP);
+    }
+
+    /*
+    * Main constructor used for setting all @params
+     */
+    public Monster(String type, String name, int age, boolean badBreath, double gpa) {
+
+        this.typeMonster = type;
+
+        this.nameMonster = name;
+
+        this.ageMonster = age;
+
+        this.badBreathMonster = badBreath;
+
+        this.gpaMonster = gpa;
+
     }
 
 
-
+    /*
+    * Overloaded constructor that takes no @params
+    * Default values and states are assigned
+     */
     public Monster() {
         typeMonster = "Zombie";
-        nameMonster = "Uuuggghhh";
-        ageMonster = 0;
-        badBreathMonster = true;
-        gpaMonster = 3.9;
-        /*
-        System.out.println();
-        System.out.println("MONSTER 1");
-        System.out.println("---------------");
-        System.out.println(typeMonster);
-        System.out.println(nameMonster);
-        System.out.println(ageMonster);
-        System.out.println(badBreathMonster);
-        System.out.println(gpaMonster);
-        System.out.println("---------------");
 
-         */
+        nameMonster = "Uuuggghhh";
+
+        ageMonster = 0;
+
+        badBreathMonster = true;
+
+        gpaMonster = 3.9;
+
 
     }
 
+    /*
+    * Constructor used for choosing the name and age of the monster, sets default states for the rest of the variables
+     */
     public Monster(String nameMonster, int ageMonster) {
         this.nameMonster = nameMonster;
         this.ageMonster = ageMonster;
-        double min = 0.0;
-        double max = 4.0;
-        double randomDouble = (double)Math.floor(Math.random()*(max-min+1)+min);
+
+        double max = 4.0; // Set the max for the random double
+
+        double randomDouble = Math.random() * max; // Random double formula
+        double roundedDouble = Math.round(randomDouble * 10) / 10.0; // Round the random double to one decimal place
+
         this.typeMonster = "Vampire";
         this.badBreathMonster = false;
-        this.gpaMonster = randomDouble;
-        // System.out.println(gpaMonster);
-        /*
-        System.out.println();
-        System.out.println("MONSTER 3");
-        System.out.println("---------------");
-        System.out.println("Type: " + typeMonster);
-        System.out.println("Name: " + nameMonster3);
-        System.out.println("Age: " + ageMonster3);
-        System.out.println("Bad breath: " + badBreathMonster);
-        System.out.println("GPA: " + gpaMonster);
-        System.out.println("---------------");
+        this.gpaMonster = roundedDouble; // Makes the GPA of the monster equal to the rounded double above
 
-         */
     }
 
     void timeWarp(double numberOfYears) {
         this.ageMonster += (int) numberOfYears;
         double gpaMultiplier = 0.1 * ((int) (Math.floor((double) numberOfYears / 100.0)));
-        // System.out.println(gpaMultiplier);
-        double newGPA = this.gpaMonster * gpaMultiplier;
-        BigDecimal roundedGPA = new BigDecimal(newGPA).setScale(1, RoundingMode.HALF_UP);
+        this.gpaMonster *= gpaMultiplier;
+
+        BigDecimal roundedGPA = new BigDecimal(this.gpaMonster).setScale(1, RoundingMode.HALF_UP);
+
         // Extra feature (***)
-        if (newGPA > 4.0) {
+        if (this.gpaMonster > 4.0) {
             roundedGPA = BigDecimal.valueOf(4.0);
         }
+
         this.gpaMonster = roundedGPA.doubleValue();
-        // System.out.println(gpaMonster);
-        // System.out.println("The Monster's new age is " + this.ageMonster);
-        // System.out.println("The Monster's new GPA is " + roundedGPA);
+
     }
 
-    void spaDay(int ageMonster, double gpaMonster, double priceSpaDay) {
-        this.ageMonster = (int) (ageMonster - priceSpaDay);
-        boolean badBreathMonster = false;
-        this.gpaMonster = gpaMonster / 2;
+    void spaDay(double priceSpaDay) {
+        this.ageMonster -= (int) priceSpaDay;
+
+        this.badBreathMonster = false;
+
+        this.gpaMonster /= 2;
+
         // Extra feature (***)
         if (this.ageMonster < 0) {
             this.ageMonster = 0;
         }
-        /*
-        System.out.println("New bad breath: " + badBreathMonster);
-        System.out.println("New gpa: " + this.gpaMonster);
-        System.out.println("Price: " + priceSpaDay);
-        System.out.println("New age: " + this.ageMonster);
-
-         */
 
     }
 
     BigDecimal percentEvil() {
         double indexOf = nameMonster.indexOf("a");
         double lengthName = nameMonster.length();
+
         BigDecimal percent2Decimal = null;
+
         try {
             double percentEvil = ((indexOf + 1) / lengthName) * 100;
             percent2Decimal = new BigDecimal(percentEvil).setScale(1, RoundingMode.HALF_UP);
-            System.out.print("Evil percentage of " + nameMonster + " is: " + percent2Decimal + "\n");
-            // System.out.print("Percent Evil: " + percent2Decimal);
+
 
         } catch (Exception e) {
             System.out.println("Cannot divide by zero.");
         }
+
         return percent2Decimal;
-        // BigDecimal percent2Decimal = new BigDecimal(percentEvil).setScale(2, RoundingMode.HALF_UP);
-        // System.out.println("Evil percentage of " + nameMonster3 + " is: " + percent2Decimal);
+
     }
     public String toString() {
         return "Type: " + this.typeMonster + " | " +
@@ -225,10 +184,5 @@ public class Monster {
                 "Percent Evil: " + percentEvil() + " | \n";
 
     }
-    // public String nameArray() {
 
-        // }
-
-        // return Arrays.toString(arr);
-    // }
 }
