@@ -7,9 +7,11 @@ Level 1 difficulty (*):
 Level 2 difficulty (**):
     - Implemented try and catch statements
     - Implemented if statements and comparison operators
+    - Implemented a new feature where you can add one additional monster (only percent evil is called on the monster)
 
 Level 3 difficulty (***):
     - Implemented a feature where if the new age set from the spa day function is less than 0, the new age set will become 0
     - Implemented a feature where if the gpa set from the time warp function is over 4.0, the new gpa set will become 4.0
 
-
+Level 4 difficulty (****):
+    - Implemented arrays in order to keep all of the monster's information in one place and output it at the end
